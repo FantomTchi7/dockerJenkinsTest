@@ -15,8 +15,8 @@ pipeline
 		{
 			steps
 			{
+				sh 'docker run -p 3000:3000 -e TRAVEL=Japan -d app'
 				sh 'docker exec -it app "npm test"'
-				sh 'docker run -p 3000:3000 -e TRAVEL=Japan app'
 			}
 		}
 	}

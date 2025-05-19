@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const travel = process.env.TRAVEL;
 
-app.get('/sweet', (req, res) => {
-res.json({"text": "Pancake"});
+app.get('/travel', (req, res) => {
+res.json({"text": travel});
 });
 
 if (require.main === module) {
